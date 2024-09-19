@@ -22,7 +22,6 @@ body{
     z-index: -1;
     top:50px;
     font-family: bebas neue;
-    text-decoration-thickness:10px;
     position: absolute;
     text-align: center;
     color:#ffffff;
@@ -55,7 +54,6 @@ main{
     font-size: 1rem;
     font-weight: 800;
     text-shadow: 5px 5px 5px rgba(66, 66, 66, 0.228);
-
 }
 
 #outer-box input{
@@ -85,7 +83,7 @@ main{
 #enter-button{
     margin:20px;
     height:40px;
-    width: 150px;
+    width: 30%;
     border-radius: 5px;
     background-color: white;
     color:var(--violet);
@@ -141,6 +139,7 @@ main{
 
 #message-body{
     overflow-y: scroll;
+    overflow-x:hidden;
     padding: 0px;
     color: white;
     border-radius: 15px;
@@ -149,6 +148,7 @@ main{
 }
 
 #message-send-area{
+    margin-top:10px;
     width: 95%;
     display: flex;
     justify-content: space-between;
@@ -165,12 +165,14 @@ main{
     margin-right: 15px;
     box-shadow: 5px 5px 5px 5px rgba(50, 50, 50, 0.228);
     color: var(--violet);
-
 }
 
 #send-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 40px;
-    width: 100px;
+    width: 80px;
     font-size: 18px;
     padding:5px;
     border:0px;
@@ -180,6 +182,7 @@ main{
     color: var(--violet);
     transition: 0.3s;
 }
+
 
 #send-button:hover{
     background-color: rgb(216, 216, 216);
@@ -231,7 +234,10 @@ li.my-message{
  }
 
  li.my-message p{
-    text-align: right;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: justify;
     font-size: 18px;
     color:var(--violet);
  }
@@ -239,7 +245,6 @@ li.my-message{
     .event-message{
         color: white;
         text-align: center;
-        font-size:10px;
     }
     
     li.event-message{
@@ -307,7 +312,7 @@ li.exit-message p{
  }
 
  li.chat-message p{
-    text-align: left;
+    text-align: justify;
     font-size: 18px;
     color:#ffffff;
  }
@@ -316,4 +321,135 @@ li.exit-message p{
     width: 1px;
  }
 
+
 /* RESPONSIVENESS */
+@media screen and (max-width: 480px) {
+
+    /* body {
+        height: 100vh;
+        overflow: hidden;
+    } */
+
+    main{
+        overflow-y:hidden;
+        width: 100%;
+        height: 100dvh;
+        display: flex;
+    }
+
+    #welcome-text{
+        font-size: 80px;
+    }
+
+    #outer-box{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width:300px;
+        padding:20px;
+    }
+
+    #outer-box label{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    #outer-box input{
+        padding:5px;
+        margin:0px;
+        text-align: center;
+        height: 35px;
+        font-size: 20px;
+        min-width: 50px;
+        width: 90%;
+    }
+
+    #enter-button{
+        width:50%;
+        height: 35px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #message-page{
+        height: 100dvh;
+    }
+
+    #head{
+        font-weight: 700;
+        font-size: 15px;
+        padding:5px;
+        width: 95%;
+        background-color: var(--light-violet);
+        color:white;
+        border-radius: 15px;
+    }
+
+    #message-card{
+        padding-top:5%;
+        padding-bottom:5%;
+        border-radius: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+    #message-send-area input{
+        font-size: 14px;
+        border-radius: 15px;
+    }
+
+    #send-button{
+        width:20%;
+        border-radius: 15px;
+    }
+
+    #send-button i{
+        font-size: 20px;
+    }
+
+    #send-button:hover{
+        background-color: white;
+    }
+
+    li.my-message{
+        padding:5px 10px 5px 10px;
+    }
+
+    li.event-message p{
+        font-size: 12px;
+    }
+
+    li.exit-message p{
+        font-size: 12px;
+    }
+
+    #message-send-area{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li.my-message span{
+        text-align: right;
+        font-size: 15px;
+     }
+    
+     li.my-message p{
+        font-weight: 500;
+        font-size: 14px;
+     }
+    
+     li.chat-message span{
+        font-size: 15px;
+        color: white;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.139);
+        font-weight: 700;
+     }
+    
+     li.chat-message p{
+        text-align: left;
+        font-size: 14px;
+        font-weight: 500;
+     }
+}

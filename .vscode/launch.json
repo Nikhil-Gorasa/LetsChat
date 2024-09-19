@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-LetsChatApplication<LetsChat>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ChatApplication.LetsChat.LetsChatApplication",
+            "projectName": "LetsChat",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

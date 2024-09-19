@@ -99,8 +99,7 @@ function submitUsername(){
     UserName = nameInput.value.trim();
 
     if (UserName === "") {
-        alert("Please enter a UserName!");
-        return;
+        UserName="Nikhil Gorasa";
     }
 
     messagingpage_head.innerHTML = `LetsChat, ${UserName}! Your conversation starts here.`;
