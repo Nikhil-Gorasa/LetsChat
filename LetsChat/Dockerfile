@@ -15,7 +15,7 @@ COPY mvnw pom.xml ./
 RUN ls -la
 
 # Copy the project source
-COPY src ./src
+COPY src src
 
 # List contents after copying source
 RUN ls -la
