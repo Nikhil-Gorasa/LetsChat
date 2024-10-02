@@ -15,7 +15,7 @@ COPY mvnw pom.xml ./
 RUN ls -la
 
 # Copy the project source
-COPY src src
+COPY src ./src
 
 # List contents after copying source
 RUN ls -la
@@ -24,7 +24,7 @@ RUN ls -la
 RUN ./mvnw package -DskipTests
 
 # Make port 9090 available to the world outside this container
-EXPOSE 9090
+EXPOSE 1010
 
 # Run the jar file 
 ENTRYPOINT ["java","-jar","/app/target/LetsChat-0.0.1-SNAPSHOT.jar"]
