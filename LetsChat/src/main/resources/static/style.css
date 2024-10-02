@@ -130,7 +130,7 @@ main{
 
 #head{
     font-weight: 700;
-    font-size: 25px;
+    font-size: 20px;
     width: 95%;
     background-color: var(--light-violet);
     color:white;
@@ -261,7 +261,7 @@ li.my-message{
     }
 
     li.event-message p{
-        font-size: 20px;
+        font-size: 18px;
     }
 
 /* Exit Message */
@@ -277,7 +277,6 @@ li.exit-message{
     margin-left:auto;
     margin-right:auto;
     display: block;
-    font-size: 15px;
     font-weight: 600;
     width:max-content;
     color:red;
@@ -286,7 +285,7 @@ li.exit-message{
 }
 
 li.exit-message p{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
@@ -320,6 +319,54 @@ li.exit-message p{
  #message-body::-webkit-scrollbar{
     width: 1px;
  }
+
+ #madewithlove{
+
+    color:white;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.139);
+    font-weight: 700;
+    font-size:15px;
+    position:fixed;
+    bottom:10px;
+    text-align: center;
+ }
+
+ #madewithlove a{
+    position: relative;
+    font-size: 15px;
+    color:white;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.139);
+ }
+
+ #madewithlove a::after{
+    display: block;
+    position: absolute;
+    content: "";
+    height:2px;
+    background-color:white;
+    width:0px;
+    transition:0.5s;
+    bottom: -2px;
+    left:0px;
+ }
+
+ #madewithlove a:hover::after{
+    width:100%;
+ }
+
+ #madewithlove i{
+    font-size: 15px;
+    color:red;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.139);
+ }
+
+ #madewithlove a.msg {
+    color: #584CD7;
+}
+
+#madewithlove a.msg::after {
+    background-color: #584CD7;
+}
 
 
 /* RESPONSIVENESS */
@@ -451,5 +498,9 @@ li.exit-message p{
         text-align: left;
         font-size: 14px;
         font-weight: 500;
+     }
+
+     #madewithlove.msg{
+        visibility:hidden;
      }
 }

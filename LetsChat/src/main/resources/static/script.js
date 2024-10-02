@@ -12,7 +12,7 @@ let messagingpage_head = document.getElementById("head");
 let messagebox = document.getElementById("messagebox");
 let chat_message = document.getElementById("chat-message");
 let sendbutton = document.getElementById("send-button");
-
+let madewithlove = document.getElementById("madewithlove");
 
 function connect() {
     console.log("Attempting to connect to WebSocket");
@@ -27,6 +27,9 @@ function onConnected() {
     homepage.classList.add('hidden');
     messagingpage.style.display = "flex";
     messagebox.autofocus = true;
+    madewithlove.style.color = "#584CD7";
+    madewithlove.classList.add("msg");
+    madewithlove.querySelector("a").classList.add("msg");
 
     stompClient.subscribe('/topic/public', onMessageReceived);
     console.log("Subscribed to /topic/public");
