@@ -1,5 +1,5 @@
 # Let's Chat
-
+Test it out over here - https://letschat-0339.onrender.com/ (Might take around a minute to startup 😄)
 ## Overview
 **Let's Chat** is a real-time chat application that enables seamless communication among users through group chat functionality. Built with a modern tech stack, the application leverages WebSocket for efficient message delivery and handling.
 
